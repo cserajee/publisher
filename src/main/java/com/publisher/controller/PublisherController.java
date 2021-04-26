@@ -20,5 +20,10 @@ public class PublisherController {
         messagingGateway.sendToPubsub(message);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    
+    @GetMapping("/")
+    public String Home() { 
+        return "Welcome";
+    }
 
 }
